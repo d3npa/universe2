@@ -22,9 +22,11 @@ def remote_addr():
 def serve_css(stylesheet):
 	return send_from_directory(f'{STATIC_ROOT}/css', stylesheet)
 
+
 @app.route('/ttf/<path:fontfile>')
 def serve_ttf(fontfile):
 	return send_from_directory(f'{STATIC_ROOT}/ttf', fontfile)
+
 
 @app.route('/')
 @app.route('/<path:file>')
