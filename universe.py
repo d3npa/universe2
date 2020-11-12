@@ -24,7 +24,8 @@ def remote_addr():
 
 
 def exec_cmd(cmd):
-	shell = shlex.split(f'sh -c \'{cmd}\'')
+	cmd = cmd.replace('\"', '\\\"')
+	shell = shlex.split(f'sh -c "{cmd}"')
 	process = Popen(shell, stdout=PIPE, stderr=PIPE, env={'LC_ALL':'C'})
 	stdout, stderr = process.communicate()
 	return (stdout.decode('utf-8'), stderr.decode('utf-8'))

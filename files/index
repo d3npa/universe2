@@ -1,2 +1,8 @@
-Hello world
-日本語@
+
+<h4>Command parsing examples:</h4>
+
+<p>figlet -f script xoreaxe.ax</p>
+$(figlet -f script xoreaxe.ax)
+
+<p>head -c 40 /dev/urandom | hexdump -C</p>
+$(head -c 40 /dev/urandom | hexdump -C)
