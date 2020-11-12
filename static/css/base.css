@@ -1,6 +1,6 @@
 :root {
-	--background: #0c0008;
-	--foreground: #ffaaf4;
+	--background: #101;
+	--foreground: #ffddf4;
 }
 
 @font-face {
@@ -20,6 +20,7 @@ html {
 body {
 	margin: auto;
 	max-width: 80ch;
+	word-wrap: break-word;
 	background-color: var(--background);
 	font-family: 'Fira Code', 'Kosugi Maru', monospace;
 }
@@ -49,4 +50,10 @@ a:hover {
 
 #navigation .align-right {
 	text-align: right;
+}
+
+pre {
+	background-color: rgba(255, 255, 255, 0.05);
+	font-size: 0.9rem;
+	padding: 1ch;
 }
